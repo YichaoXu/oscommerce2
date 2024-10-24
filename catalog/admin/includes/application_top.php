@@ -13,7 +13,7 @@
 
 // Start the clock for the page parse time log
   define('PAGE_PARSE_START_TIME', microtime());
-  define('OSCOM_BASE_DIR', realpath(__DIR__ . '/../../includes/OSC/') . '/');
+  define('OSCOM_BASE_DIR', realpath(__DIR__ . '/../../OSC/') . '/');
 
 // Set the level of error reporting
   error_reporting(E_ALL & ~E_DEPRECATED);
@@ -24,21 +24,21 @@
   OSCOM::initialize();
 
   if (PHP_VERSION_ID < 70000) {
-    include(OSCOM::getConfig('dir_root', 'Shop') . 'includes/third_party/random_compat/random.php');
+    include(OSCOM::getConfig('dir_root', 'Shop') . 'third_party/random_compat/random.php');
   }
 
-  require('includes/filenames.php');
-  require('includes/functions/general.php');
-  require('includes/classes/logger.php');
-  require('includes/classes/shopping_cart.php');
-  require('includes/classes/table_block.php');
-  require('includes/classes/box.php');
-  require('includes/classes/object_info.php');
-  require('includes/classes/upload.php');
-  require('includes/classes/action_recorder.php');
-  require('includes/classes/cfg_modules.php');
+  require('filenames.php');
+  require('functions/general.php');
+  require('classes/logger.php');
+  require('classes/shopping_cart.php');
+  require('classes/table_block.php');
+  require('classes/box.php');
+  require('classes/object_info.php');
+  require('classes/upload.php');
+  require('classes/action_recorder.php');
+  require('classes/cfg_modules.php');
 
-  require(OSCOM::getConfig('dir_root', 'Shop') . 'includes/classes/osc_template.php');
+  require(OSCOM::getConfig('dir_root', 'Shop') . 'classes/osc_template.php');
 
   OSCOM::loadSite('Admin');
 
@@ -74,7 +74,7 @@
   $cl_apps_groups = array();
 
   if (isset($_SESSION['admin'])) {
-    if ($dir = @dir(OSCOM::getConfig('dir_root') . 'includes/boxes')) {
+    if ($dir = @dir(OSCOM::getConfig('dir_root') . 'boxes')) {
       $files = array();
 
       while ($file = $dir->read()) {

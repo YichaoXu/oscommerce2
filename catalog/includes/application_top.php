@@ -30,22 +30,22 @@
   }
 
   if (PHP_VERSION_ID < 70000) {
-    include('includes/third_party/random_compat/random.php');
+    include('third_party/random_compat/random.php');
   }
 
-  require('includes/functions/general.php');
-  require('includes/classes/shopping_cart.php');
-  require('includes/classes/navigation_history.php');
-  require('includes/classes/currencies.php');
-  require('includes/classes/action_recorder.php');
-  require('includes/classes/alertbox.php');
-  require('includes/classes/message_stack.php');
-  require('includes/functions/whos_online.php');
-  require('includes/functions/banner.php');
-  require('includes/functions/specials.php');
-  require('includes/classes/osc_template.php');
-  require('includes/classes/category_tree.php');
-  require('includes/classes/breadcrumb.php');
+  require('functions/general.php');
+  require('classes/shopping_cart.php');
+  require('classes/navigation_history.php');
+  require('classes/currencies.php');
+  require('classes/action_recorder.php');
+  require('classes/alertbox.php');
+  require('classes/message_stack.php');
+  require('functions/whos_online.php');
+  require('functions/banner.php');
+  require('functions/specials.php');
+  require('classes/osc_template.php');
+  require('classes/category_tree.php');
+  require('classes/breadcrumb.php');
 
   OSCOM::loadSite('Shop');
 
